@@ -1,11 +1,32 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Sprites/Title screen/mainmenutext.png" type="Texture" id=1]
-[ext_resource path="res://Sprites/Title screen/mainmenucircle.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/Title screen/settings.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Title screen/credits.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Title screen/startgame.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade9.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade7.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/Title screen/mainmenucircle.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade2.png" type="Texture" id=5]
 [ext_resource path="res://Sprites/Title screen/mainmenulines.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade4.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade8.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade10.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade6.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade5.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/Misc/Grey fade/fade3.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/Title screen/settings.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/Title screen/credits.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/Title screen/startgame.png" type="Texture" id=16]
+[ext_resource path="res://Scenes/Main menu/Script.gd" type="Script" id=17]
+[ext_resource path="res://Sprites/Logos/logo placeholder.png" type="Texture" id=18]
+[ext_resource path="res://Sprites/Logos/SIH logo.png" type="Texture" id=19]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "Fade",
+"speed": 10.0
+} ]
 
 [node name="MainMenu" type="MarginContainer"]
 anchor_right = 1.0
@@ -17,6 +38,9 @@ custom_constants/margin_top = 20
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Script" type="Node" parent="."]
+script = ExtResource( 17 )
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="."]
 margin_top = 20.0
@@ -34,7 +58,7 @@ alignment = 2
 margin_top = 166.0
 margin_right = 521.0
 margin_bottom = 580.0
-texture = ExtResource( 2 )
+texture = ExtResource( 4 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_top = 20.0
@@ -83,19 +107,19 @@ custom_constants/separation = 20
 [node name="StartGame" type="TextureRect" parent="HBoxContainer/VBoxContainer2/Spacing2/MenuOptions"]
 margin_right = 990.0
 margin_bottom = 47.0
-texture = ExtResource( 5 )
+texture = ExtResource( 16 )
 
 [node name="Settings" type="TextureRect" parent="HBoxContainer/VBoxContainer2/Spacing2/MenuOptions"]
 margin_top = 67.0
 margin_right = 990.0
 margin_bottom = 114.0
-texture = ExtResource( 3 )
+texture = ExtResource( 14 )
 
 [node name="Credits" type="TextureRect" parent="HBoxContainer/VBoxContainer2/Spacing2/MenuOptions"]
 margin_top = 134.0
 margin_right = 990.0
 margin_bottom = 181.0
-texture = ExtResource( 4 )
+texture = ExtResource( 15 )
 
 [node name="Background" type="CanvasLayer" parent="."]
 layer = -1
@@ -107,3 +131,23 @@ color = Color( 0.703125, 0.466919, 0.466919, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Foreground" type="CanvasLayer" parent="."]
+
+[node name="Fade" type="AnimatedSprite" parent="Foreground"]
+position = Vector2( 517, 300 )
+scale = Vector2( 0.5375, 0.57037 )
+frames = SubResource( 1 )
+animation = "Fade"
+
+[node name="Game Logo" type="Sprite" parent="Foreground"]
+visible = false
+position = Vector2( 512, 300 )
+scale = Vector2( 1.552, 1.587 )
+texture = ExtResource( 18 )
+
+[node name="SIH Logo" type="Sprite" parent="Foreground"]
+position = Vector2( 512, 300 )
+scale = Vector2( 1.552, 1.587 )
+texture = ExtResource( 19 )
+[connection signal="animation_finished" from="Foreground/Fade" to="Script" method="_on_Fade_animation_finished"]

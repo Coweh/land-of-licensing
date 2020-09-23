@@ -19,4 +19,3 @@ func _ready():
 # Queue free the fade node once it isn't needed anymore.
 func _on_Fade_animation_finished():
 	fade.queue_free()
-# uh

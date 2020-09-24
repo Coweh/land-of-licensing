@@ -1,2 +1,2 @@
-# land-of-licensing
-An open source game that's currenty in early development.
+# Land of Licensing
+An open source game by Shapes in Hats that's currenty in early development.

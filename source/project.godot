@@ -8,15 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "MobPlatformer",
+"language": "GDScript",
+"path": "res://misc_scripts/mob_platformer.gd"
+} ]
 _global_script_class_icons={
-
+"MobPlatformer": ""
 }
 
 [application]
 
 config/name="Land of Licensing"
-run/main_scene="res://Scenes/Main menu/MainMenu.tscn"
+run/main_scene="res://scenes/main_menu/main_menu.tscn"
 config/icon="res://icon.png"
 
 [display]

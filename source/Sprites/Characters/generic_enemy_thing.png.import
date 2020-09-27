@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/logo placeholder.png-540e96b0364d19b327d07d6ac5093979.stex"
+path="res://.import/generic_enemy_thing.png-7863225d3f7aecad0d290d99cba9df58.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Logos/logo placeholder.png"
-dest_files=[ "res://.import/logo placeholder.png-540e96b0364d19b327d07d6ac5093979.stex" ]
+source_file="res://sprites/characters/generic_enemy_thing.png"
+dest_files=[ "res://.import/generic_enemy_thing.png-7863225d3f7aecad0d290d99cba9df58.stex" ]
 
 [params]
 

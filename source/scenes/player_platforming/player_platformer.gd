@@ -3,9 +3,15 @@ extends KinematicBody2D
 # Create an enum with a list of states.
 enum States {NORMAL, WALL_SLIDE}
 
+# Declare a variable that determines the player's current state.
+var state = States.NORMAL
+
 # Declare the x and y velocity, which will be used to calculate movement speed.
 var y_velocity = 0
 var x_velocity = 0
+
+# Declare a variable that determines if the player is facing right.
+var facing_right = false
 
 # Declare constants that change how the mechanics work.
 const WALK_SPEED = 100
@@ -16,11 +22,6 @@ const JUMP_FORCE = 1200
 const GRAVITY = 50
 const MAX_FALL_SPEED = 1000
 const MAX_WALL_SLIDE_SPEED = 400
-
-# Declare a variable that determines if the player is facing right.
-var facing_right = false
-# Declare a variable that determines the player's current state.
-var state = States.NORMAL
 
 # Declare variables for nodes that will be used.
 onready var run_timer = $"RunTimer"

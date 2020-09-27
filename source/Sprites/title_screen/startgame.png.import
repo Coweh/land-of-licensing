@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/mainmenutext.png-fc253460548c1c389e5101ba12d427f3.stex"
+path="res://.import/startgame.png-883cdd90f72791b9a6c5b837308b8d4e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Title screen/mainmenutext.png"
-dest_files=[ "res://.import/mainmenutext.png-fc253460548c1c389e5101ba12d427f3.stex" ]
+source_file="res://sprites/title_screen/startgame.png"
+dest_files=[ "res://.import/startgame.png-883cdd90f72791b9a6c5b837308b8d4e.stex" ]
 
 [params]
 

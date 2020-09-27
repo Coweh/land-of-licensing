@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SIH logo.png-ed042a74e8bfd83df2182d7757db6209.stex"
+path="res://.import/logo_placeholder.png-61f1005c35cecef30298a8cd9696ceb2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Logos/SIH logo.png"
-dest_files=[ "res://.import/SIH logo.png-ed042a74e8bfd83df2182d7757db6209.stex" ]
+source_file="res://sprites/logos/logo_placeholder.png"
+dest_files=[ "res://.import/logo_placeholder.png-61f1005c35cecef30298a8cd9696ceb2.stex" ]
 
 [params]
 

@@ -104,17 +104,6 @@ margin_right = 990.0
 margin_bottom = 181.0
 texture = ExtResource( 15 )
 
-[node name="Background" type="CanvasLayer" parent="."]
-layer = -1
-
-[node name="BackgroundRect" type="ColorRect" parent="Background"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.703125, 0.466919, 0.466919, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Foreground" type="CanvasLayer" parent="."]
 
 [node name="Tween" type="Tween" parent="Foreground"]
@@ -123,6 +112,7 @@ __meta__ = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = 8.0
+margin_bottom = 3.0
 color = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -138,3 +128,4 @@ texture = ExtResource( 18 )
 position = Vector2( 512, 300 )
 scale = Vector2( 1.552, 1.587 )
 texture = ExtResource( 19 )
+[connection signal="tween_all_completed" from="Foreground/Tween" to="Script" method="_on_Tween_tween_all_completed"]

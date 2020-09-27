@@ -109,7 +109,6 @@ func _physics_process(delta):
 			x_velocity -= BRAKE_SPEED * delta
 		if x_velocity < 0:
 			x_velocity += BRAKE_SPEED * delta
-	# warning-ignore:return_value_discarded
 
 	# Indicate whether or not the player was grounded in the last 0.18 seconds.
 	var grounded
@@ -148,6 +147,7 @@ func _physics_process(delta):
 	y_velocity += GRAVITY
 
 	# Move based on the current x and y velocity.
+# warning-ignore:return_value_discarded
 	move_and_slide(Vector2(x_velocity, y_velocity), Vector2(0, -1), true)
 	
 	# Play animations.

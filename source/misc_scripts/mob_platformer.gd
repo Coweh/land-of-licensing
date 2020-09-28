@@ -25,6 +25,14 @@ func flip(sprite):
 	facing_right = not facing_right
 	sprite.flip_h = not sprite.flip_h
 
+# Check if the mob needs to be flipped, and if so, call flip(). "sprite" is,
+# again, the path to the Sprite node the mob uses.
+func checkflip(sprite):
+	if facing_right and x_velocity < 0:
+		flip(sprite)
+	if not facing_right and x_velocity > 0:
+		flip(sprite)
+
 # Create a function for more easily playing animations. "animation_player" is a 
 # path to the AnimationPlayer node the mob uses.
 func play_animation(animation_player, animation_name):

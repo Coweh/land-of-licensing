@@ -27,7 +27,7 @@ func flip(sprite):
 
 # Check if the mob needs to be flipped, and if so, call flip(). "sprite" is,
 # again, the path to the Sprite node the mob uses.
-func checkflip(sprite):
+func check_flip(sprite):
 	if facing_right and x_velocity < 0:
 		flip(sprite)
 	if not facing_right and x_velocity > 0:
